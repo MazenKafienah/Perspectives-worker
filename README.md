@@ -29,7 +29,7 @@ This repository owns the **ingestion pipeline and the production database schema
 
 `supabase/migrations/` is the **only** canonical, executable location for PERSPECTIVES production SQL. No other repository in this project (including the general migration toolkit) should hold a second canonical copy of production schema.
 
-A baseline capture of the **existing live database** (created outside this repository, prior to any migration file existing here) will be reconciled into this directory in a separately authorised phase (MIG-001). That baseline represents already-existing production state — it must not be blindly reapplied against production without review.
+MIG-001 captured the existing live database schema read-only (via a manually-run SQL Editor query, never a direct connection from any coding agent) and reconciled it against the planning documents. See [`supabase/baseline/README.md`](supabase/baseline/README.md) for the resulting existing-state baseline and [`docs/MIG001_LIVE_SCHEMA_RECONCILIATION_REPORT.md`](docs/MIG001_LIVE_SCHEMA_RECONCILIATION_REPORT.md) for the full reconciliation. That baseline represents already-existing production state — it has not been replay-tested and must not be applied against production without a separately authorised review.
 
 ## Environment variables
 

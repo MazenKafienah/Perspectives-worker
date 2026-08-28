@@ -24,8 +24,19 @@ The Python ingestion/enrichment/summarisation worker for PERSPECTIVES, and the c
 
 ## Database migrations
 
-Do not create schema SQL in this phase (MIG-000). A live-database baseline capture and grant reconciliation happens in a separately authorised phase (MIG-001) — read-only inspection first, no state-changing SQL without explicit separate authorisation. When that baseline lands, treat it as a snapshot of already-existing production state, not a script to blindly rerun.
+MIG-001 produced a read-only-captured existing-state baseline (`supabase/baseline/`) and a proposed grant script (`supabase/grants/`), both guarded against accidental execution and neither replay-tested. Treat both as snapshots/proposals, not scripts to run. `supabase/migrations/` remains empty until a later, separately authorised phase populates it with real, replay-validated migrations.
+
+## Permanent credential-handling rules (do not remove or weaken)
+
+These apply in every future phase, not just MIG-001, following a real incident where a diagnostic command printed a live credential into a session transcript:
+
+- Never run a credential-helper, Keychain, or secret-store lookup as a diagnostic or troubleshooting step (`git credential*`, `security find-*-password`, Supabase/GitHub CLI credential-storage inspection, etc.).
+- Never enumerate or print environment variables as a diagnostic step (`env`, `printenv`, `export -p`, or similar).
+- Never read a `.env`, `.env.local`, or any other populated environment file.
+- Never read, request, print, log, or commit a Supabase access token, database password, service-role key, Anthropic/OpenAI API key, GitHub token, or any connection string containing credentials.
+- If a required CLI or authentication is unavailable, stop and report exactly that — do not probe for an alternate way to recover or work around missing credentials.
+- Claude Code must never connect directly to Supabase (CLI, Management API, Data API, PostgREST, GraphQL, or a raw `psql`/connection-string session). Live database facts are gathered only via a read-only SQL query that a human runs manually and exports to a local file for Claude Code to read.
 
 ## Current status
 
-MIG-000 governance only. No pipeline modules, dependencies, or SQL exist yet beyond this documentation and an empty `supabase/migrations/` placeholder.
+MIG-001 complete: live schema captured (read-only, manual export), reconciled against the planning documents, existing-state baseline and proposed grants drafted (both guarded, neither executed, neither replay-tested). No worker pipeline modules or dependencies exist yet. No SQL has been executed against Supabase at any point in this project's history to date.
