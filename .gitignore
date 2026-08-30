@@ -29,3 +29,6 @@ build/
 # Logs and caches
 *.log
 .cache/
+
+# Supabase CLI local tool cache (version-check cache, no project/credential data)
+supabase/.temp/
