@@ -24,7 +24,7 @@ The Python ingestion/enrichment/summarisation worker for PERSPECTIVES, and the c
 
 ## Database migrations
 
-MIG-001 produced a read-only-captured existing-state baseline (`supabase/baseline/`) and a proposed grant script (`supabase/grants/`), both guarded against accidental execution and neither replay-tested. Treat both as snapshots/proposals, not scripts to run. `supabase/migrations/` remains empty until a later, separately authorised phase populates it with real, replay-validated migrations.
+MIG-001 produced a read-only-captured existing-state baseline (`supabase/baseline/`) and a proposed grant script (`supabase/grants/`), both guarded against accidental execution. MIG-002 replay-validated the baseline and locally rehearsed the grant plan against a disposable local Supabase stack — both remain guarded, and **neither has been executed against production**. Treat both as reviewed proposals, not scripts to run against the live project. `supabase/migrations/` remains empty until a later, separately authorised phase actually executes something against production.
 
 ## Permanent credential-handling rules (do not remove or weaken)
 
@@ -35,8 +35,9 @@ These apply in every future phase, not just MIG-001, following a real incident w
 - Never read a `.env`, `.env.local`, or any other populated environment file.
 - Never read, request, print, log, or commit a Supabase access token, database password, service-role key, Anthropic/OpenAI API key, GitHub token, or any connection string containing credentials.
 - If a required CLI or authentication is unavailable, stop and report exactly that — do not probe for an alternate way to recover or work around missing credentials.
-- Claude Code must never connect directly to Supabase (CLI, Management API, Data API, PostgREST, GraphQL, or a raw `psql`/connection-string session). Live database facts are gathered only via a read-only SQL query that a human runs manually and exports to a local file for Claude Code to read.
+- **Claude Code must never connect directly to the *live/production* Supabase project** (CLI with `supabase link`, Management API, production Data API, production PostgREST/GraphQL, or a `psql`/connection-string session using a live credential). Live database facts are gathered only via a read-only SQL query that a human runs manually and exports to a local file for Claude Code to read.
+- **A disposable, local-only Supabase/Postgres instance (e.g. `supabase start` via the official CLI, on loopback, with no `supabase link` and no production credential) is a different thing and is fine to connect to directly** — MIG-002 did exactly this to replay the baseline and rehearse grants. The rule above is about production, not about local sandboxes used for validation.
 
 ## Current status
 
-MIG-001 complete: live schema captured (read-only, manual export), reconciled against the planning documents, existing-state baseline and proposed grants drafted (both guarded, neither executed, neither replay-tested). No worker pipeline modules or dependencies exist yet. No SQL has been executed against Supabase at any point in this project's history to date.
+MIG-001 and MIG-002 complete. Live schema captured (read-only, manual export) and reconciled against the planning documents; existing-state baseline and a reviewed grant plan drafted, then successfully replay-validated and locally rehearsed (idempotent, reversible) against a disposable local Supabase stack — both remain guarded and neither has been executed against production. No worker pipeline modules or dependencies exist yet. No SQL has ever been executed against the live PERSPECTIVES Supabase project.
