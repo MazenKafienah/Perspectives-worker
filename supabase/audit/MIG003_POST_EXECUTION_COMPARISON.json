@@ -1,0 +1,388 @@
+{
+  "article_processing_log_policy": {
+    "identical": true,
+    "post": [
+      {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "processing_log_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_processing_log",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      }
+    ],
+    "pre": [
+      {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "processing_log_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_processing_log",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      }
+    ]
+  },
+  "column_privileges_row_count": {
+    "post": 1033,
+    "pre": 1824
+  },
+  "data_api_exposure_post": [
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": false,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "api_cache"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": false,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "article_processing_log"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": true,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "article_specialties"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": true,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "articles"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": true,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "authors"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": false,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "content_fingerprints"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "interaction_signals"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": true,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "journals"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": true,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "specialties"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": false,
+      "authenticated_select": true,
+      "authenticated_update": false,
+      "service_role_select": true,
+      "table_name": "subtopics"
+    },
+    {
+      "anon_delete": false,
+      "anon_insert": false,
+      "anon_select": false,
+      "anon_update": false,
+      "authenticated_delete": false,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "user_preferences"
+    }
+  ],
+  "privilege_comparison": [
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "api_cache",
+      "target": []
+    },
+    {
+      "post_execution": [],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "api_cache",
+      "target": []
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "article_processing_log",
+      "target": []
+    },
+    {
+      "post_execution": [],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "article_processing_log",
+      "target": []
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "article_specialties",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "article_specialties",
+      "target": [
+        "SELECT"
+      ]
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "articles",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "articles",
+      "target": [
+        "SELECT"
+      ]
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "authors",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "authors",
+      "target": [
+        "SELECT"
+      ]
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "content_fingerprints",
+      "target": []
+    },
+    {
+      "post_execution": [],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "content_fingerprints",
+      "target": []
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "interaction_signals",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "DELETE",
+        "INSERT",
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "interaction_signals",
+      "target": [
+        "DELETE",
+        "INSERT",
+        "SELECT"
+      ]
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "journals",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "journals",
+      "target": [
+        "SELECT"
+      ]
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "specialties",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "specialties",
+      "target": [
+        "SELECT"
+      ]
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "subtopics",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "subtopics",
+      "target": [
+        "SELECT"
+      ]
+    },
+    {
+      "post_execution": [],
+      "role": "anon",
+      "status": "MATCH",
+      "table": "user_preferences",
+      "target": []
+    },
+    {
+      "post_execution": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "user_preferences",
+      "target": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ]
+    }
+  ],
+  "service_role": {
+    "identical": true,
+    "post_rows": 77,
+    "pre_rows": 77
+  },
+  "structural_invariants": {
+    "columns": "IDENTICAL",
+    "constraints": "IDENTICAL",
+    "domains": "IDENTICAL",
+    "enums": "IDENTICAL",
+    "extensions": "IDENTICAL",
+    "functions": "IDENTICAL",
+    "generated_columns": "IDENTICAL",
+    "indexes": "IDENTICAL",
+    "materialized_views": "IDENTICAL",
+    "policies": "IDENTICAL",
+    "publication_membership": "IDENTICAL",
+    "schemas": "IDENTICAL",
+    "sequences": "IDENTICAL",
+    "tables": "IDENTICAL",
+    "triggers": "IDENTICAL",
+    "views": "IDENTICAL"
+  }
+}

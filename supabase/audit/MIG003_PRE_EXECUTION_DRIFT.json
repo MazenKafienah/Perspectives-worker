@@ -1,0 +1,1966 @@
+{
+  "comparisons": [
+    {
+      "category": "table_set",
+      "fresh": [
+        "api_cache",
+        "article_processing_log",
+        "article_specialties",
+        "articles",
+        "authors",
+        "content_fingerprints",
+        "interaction_signals",
+        "journals",
+        "specialties",
+        "subtopics",
+        "user_preferences"
+      ],
+      "historical": [
+        "api_cache",
+        "article_processing_log",
+        "article_specialties",
+        "articles",
+        "authors",
+        "content_fingerprints",
+        "interaction_signals",
+        "journals",
+        "specialties",
+        "subtopics",
+        "user_preferences"
+      ],
+      "item": "public_table_names",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "postgres_version",
+      "fresh": "PostgreSQL 17.6 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit",
+      "historical": "PostgreSQL 17.6 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit",
+      "item": "version()",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "api_cache",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "article_processing_log",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "article_specialties",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "articles",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "authors",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "content_fingerprints",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "interaction_signals",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "journals",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "specialties",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "subtopics",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "table_flags",
+      "fresh": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "historical": {
+        "forced": false,
+        "owner": "postgres",
+        "rls": true
+      },
+      "item": "user_preferences",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.cache_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.cache_value",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.expires_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.fetched_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.source",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.doi",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.rejection_reason",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.stage",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.stage_metadata",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.status",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.article_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.confidence",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.specialty_code",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.article_type",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.author_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.author_institution",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.author_name",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.co_authors",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.confidence_score",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.core_claim",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.discovered_via",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.doi",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.embedding",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.fts",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.headline",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.journal",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.journal_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.journal_impact_factor",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.original_title",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.original_url",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.processing_log_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.publication_date",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.studies_referenced",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.subtopic_slugs",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.summary",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.tags",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.uncertainty_notes",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.biography",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.citation_count",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.country",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.enrichment_source",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.full_name",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.full_title",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.h_index",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.institution",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.lab_description",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.lab_name",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.lab_url",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.last_enriched_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.openalex_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.orcid_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.photo_url",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.primary_specialty",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.recent_conferences",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.recent_paper_count",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.recent_publications",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.research_focus",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.researchgate_url",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.semantic_scholar_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.title",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.article_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.computed_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.fingerprint",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.article_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.context",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.dwell_seconds",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.signal_type",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.user_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.abbreviation",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.active",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.aliases",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.corpus",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.default_specialty",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.h5_index",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.impact_factor",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.issn",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.jcr_year",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.name",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.name_canonical",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.rss_url",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.tier",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "specialties.code",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "specialties.created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "specialties.label",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.description",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.keywords",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.label",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.mesh_terms",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.seeded",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.slug",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.specialty",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.active_subtopics",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.followed_authors",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.liked_labs",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.onboarded",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.pinned_specialties",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.saved_articles",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "column",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.user_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.api_cache_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.article_processing_log_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.article_processing_log_status_check",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.article_specialties_article_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.article_specialties_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.article_specialties_specialty_code_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_article_type_check",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_author_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_doi_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_journal_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_processing_log_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.authors_orcid_id_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.authors_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.authors_primary_specialty_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.content_fingerprints_article_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.content_fingerprints_article_id_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.content_fingerprints_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.interaction_signals_article_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.interaction_signals_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.interaction_signals_signal_type_check",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.interaction_signals_user_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.journals_default_specialty_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.journals_name_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.journals_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.journals_tier_check",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "specialties.specialties_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.subtopics_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.subtopics_slug_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.subtopics_specialty_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.user_preferences_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "constraint",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.user_preferences_user_id_fkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.api_cache_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache.idx_api_cache_expires",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.article_processing_log_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.idx_processing_log_doi",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.idx_processing_log_stage",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.idx_processing_log_status",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.article_specialties_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.idx_article_specialties_specialty",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_doi_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.idx_articles_author_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.idx_articles_created_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.idx_articles_fts",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.idx_articles_journal_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.idx_articles_publication_date",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.authors_orcid_id_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.authors_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.idx_authors_full_name",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.idx_authors_openalex",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.idx_authors_semantic",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.idx_authors_unenriched",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.content_fingerprints_article_id_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints.content_fingerprints_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.idx_signals_article_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.idx_signals_type",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.idx_signals_user_article",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.idx_signals_user_id",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.interaction_signals_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.journals_name_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.journals_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "specialties.specialties_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.idx_subtopics_specialty",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.subtopics_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.subtopics_slug_key",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "index",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.user_preferences_pkey",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "trigger",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.trg_processing_log_updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "trigger",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.trg_articles_updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "trigger",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.trg_journals_updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "trigger",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.trg_user_preferences_updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "function",
+      "fresh": "match",
+      "historical": "match",
+      "item": "set_updated_at",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log.processing_log_authenticated_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties.article_specialties_authenticated_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles.articles_authenticated_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors.authors_authenticated_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.signals_own_delete",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.signals_own_insert",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals.signals_own_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals.journals_authenticated_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "specialties.specialties_authenticated_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics.subtopics_authenticated_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.preferences_own_insert",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.preferences_own_read",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences.preferences_own_update",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privileges",
+      "fresh": "231 rows",
+      "historical": "231 rows",
+      "item": "anon_authenticated_service_role_table_privileges",
+      "note": "This is the exact pre-transition state the target grant plan assumes.",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "api_cache",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_processing_log",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "article_specialties",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "articles",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "authors",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "content_fingerprints",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "interaction_signals",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "journals",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "specialties",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "subtopics",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "data_api_exposure",
+      "fresh": "match",
+      "historical": "match",
+      "item": "user_preferences",
+      "note": "",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "schema_privileges",
+      "fresh": [
+        {
+          "has_create": false,
+          "has_usage": true,
+          "role": "anon",
+          "schema_name": "public"
+        },
+        {
+          "has_create": false,
+          "has_usage": true,
+          "role": "authenticated",
+          "schema_name": "public"
+        },
+        {
+          "has_create": true,
+          "has_usage": true,
+          "role": "postgres",
+          "schema_name": "public"
+        },
+        {
+          "has_create": false,
+          "has_usage": true,
+          "role": "service_role",
+          "schema_name": "public"
+        }
+      ],
+      "historical": [
+        {
+          "has_create": false,
+          "has_usage": true,
+          "role": "anon",
+          "schema_name": "public"
+        },
+        {
+          "has_create": false,
+          "has_usage": true,
+          "role": "authenticated",
+          "schema_name": "public"
+        },
+        {
+          "has_create": true,
+          "has_usage": true,
+          "role": "postgres",
+          "schema_name": "public"
+        },
+        {
+          "has_create": false,
+          "has_usage": true,
+          "role": "service_role",
+          "schema_name": "public"
+        }
+      ],
+      "item": "public_schema_usage",
+      "note": "",
+      "status": "EXACT_MATCH"
+    }
+  ]
+}
