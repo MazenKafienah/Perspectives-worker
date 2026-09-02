@@ -1,0 +1,34 @@
+table_name,role,target_table_privilege,live_rls_permits_this_role,effective_intended_result,provenance,note
+api_cache,anon,NONE,N/A,DENIED,USER_DECISION,worker-only per locked decision
+api_cache,authenticated,NONE,N/A (zero policies == default deny),DENIED,USER_DECISION + LIVE_CAPTURE_VERIFIED,matches live deny-all RLS shape already
+api_cache,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker-only tables reached only by direct Postgres connection
+article_processing_log,anon,NONE,"YES (stale policy exists, but irrelevant once grant revoked)",DENIED,USER_DECISION,worker-only per locked decision
+article_processing_log,authenticated,NONE,YES — stale live policy 'processing_log_authenticated_read' still permits SELECT,DENIED (grant revoked; stale policy alone cannot grant access without a table privilege),USER_DECISION + LIVE_CAPTURE_VERIFIED,"residual RLS policy is documented technical debt, NOT removed in MIG-002; revoking the grant alone is sufficient to close Data API access"
+article_processing_log,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker-only tables reached only by direct Postgres connection
+article_specialties,anon,NONE,N/A (no anon policy exists),DENIED,USER_DECISION,V1 authenticated-only; anon never reads reader content
+article_specialties,authenticated,SELECT,YES (auth.role()='authenticated'),SELECT permitted,LIVE_CAPTURE_VERIFIED,grant matches existing live RLS policy exactly
+article_specialties,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker uses direct Postgres connection per docs
+articles,anon,NONE,N/A (no anon policy exists),DENIED,USER_DECISION,V1 authenticated-only; anon never reads reader content
+articles,authenticated,SELECT,YES (auth.role()='authenticated'),SELECT permitted,LIVE_CAPTURE_VERIFIED,grant matches existing live RLS policy exactly
+articles,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker uses direct Postgres connection per docs
+authors,anon,NONE,N/A (no anon policy exists),DENIED,USER_DECISION,V1 authenticated-only; anon never reads reader content
+authors,authenticated,SELECT,YES (auth.role()='authenticated'),SELECT permitted,LIVE_CAPTURE_VERIFIED,grant matches existing live RLS policy exactly
+authors,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker uses direct Postgres connection per docs
+content_fingerprints,anon,NONE,N/A,DENIED,USER_DECISION,worker-only per locked decision
+content_fingerprints,authenticated,NONE,N/A (zero policies == default deny),DENIED,USER_DECISION + LIVE_CAPTURE_VERIFIED,matches live deny-all RLS shape already
+content_fingerprints,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker-only tables reached only by direct Postgres connection
+interaction_signals,anon,NONE,N/A,DENIED,LIVE_CAPTURE_VERIFIED,no anon policy exists
+interaction_signals,authenticated,"SELECT, INSERT, DELETE","YES (auth.uid() = user_id, per command)",own-row SELECT/INSERT/DELETE only; no UPDATE (no policy exists),LIVE_CAPTURE_VERIFIED,"grant command list mirrors live policy commands exactly; UPDATE deliberately omitted, not invented"
+interaction_signals,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,
+journals,anon,NONE,N/A (no anon policy exists),DENIED,USER_DECISION,V1 authenticated-only; anon never reads reader content
+journals,authenticated,SELECT,YES (auth.role()='authenticated'),SELECT permitted,LIVE_CAPTURE_VERIFIED,grant matches existing live RLS policy exactly
+journals,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker uses direct Postgres connection per docs
+specialties,anon,NONE,N/A (no anon policy exists),DENIED,USER_DECISION,V1 authenticated-only; anon never reads reader content
+specialties,authenticated,SELECT,YES (auth.role()='authenticated'),SELECT permitted,LIVE_CAPTURE_VERIFIED,grant matches existing live RLS policy exactly
+specialties,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker uses direct Postgres connection per docs
+subtopics,anon,NONE,N/A (no anon policy exists),DENIED,USER_DECISION,V1 authenticated-only; anon never reads reader content
+subtopics,authenticated,SELECT,YES (auth.role()='authenticated'),SELECT permitted,LIVE_CAPTURE_VERIFIED,grant matches existing live RLS policy exactly
+subtopics,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,worker uses direct Postgres connection per docs
+user_preferences,anon,NONE,N/A,DENIED,LIVE_CAPTURE_VERIFIED,no anon policy exists
+user_preferences,authenticated,"SELECT, INSERT, UPDATE","YES (auth.uid() = user_id, per command)",own-row SELECT/INSERT/UPDATE only; no DELETE (no policy exists),LIVE_CAPTURE_VERIFIED,"grant command list mirrors live policy commands exactly; DELETE deliberately omitted, not invented"
+user_preferences,service_role,ALL (unchanged),N/A (bypasses RLS),"full access via direct Postgres, not Data API",DOCUMENT_DERIVED,
