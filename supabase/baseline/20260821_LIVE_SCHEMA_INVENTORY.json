@@ -1,0 +1,4890 @@
+{
+  "column_privileges_summary": {
+    "distinct_grantee_privilege_pairs": [
+      "anon:INSERT",
+      "anon:REFERENCES",
+      "anon:SELECT",
+      "anon:UPDATE",
+      "authenticated:INSERT",
+      "authenticated:REFERENCES",
+      "authenticated:SELECT",
+      "authenticated:UPDATE",
+      "postgres:INSERT",
+      "postgres:REFERENCES",
+      "postgres:SELECT",
+      "postgres:UPDATE",
+      "service_role:INSERT",
+      "service_role:REFERENCES",
+      "service_role:SELECT",
+      "service_role:UPDATE"
+    ],
+    "note": "Column-level privileges (1824 raw rows in the capture) are a homogeneous, per-column mirror of the table-level grants below \u2014 confirmed by cross-checking grantee/privilege_type pair counts. No column carries a privilege restriction narrower than its table. The raw per-column rows are omitted here for reviewability; see table_privileges for the authoritative grant state, and the raw capture file for the full per-column detail if ever needed.",
+    "total_raw_column_privilege_rows": 1824
+  },
+  "columns": [
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "cache_key",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "api_cache",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "cache_value",
+      "data_type": "jsonb",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "api_cache",
+      "udt_name": "jsonb",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "source",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "api_cache",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "fetched_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "api_cache",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "expires_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "api_cache",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "gen_random_uuid()",
+      "column_name": "id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "article_processing_log",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "doi",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "article_processing_log",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "stage",
+      "data_type": "smallint",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": 16,
+      "numeric_scale": 0,
+      "ordinal_position": 3,
+      "table_name": "article_processing_log",
+      "udt_name": "int2",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "status",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "article_processing_log",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "rejection_reason",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "article_processing_log",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::jsonb",
+      "column_name": "stage_metadata",
+      "data_type": "jsonb",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 6,
+      "table_name": "article_processing_log",
+      "udt_name": "jsonb",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 7,
+      "table_name": "article_processing_log",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 8,
+      "table_name": "article_processing_log",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "article_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "article_specialties",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "specialty_code",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "article_specialties",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "1.0",
+      "column_name": "confidence",
+      "data_type": "numeric",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "article_specialties",
+      "udt_name": "numeric",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "gen_random_uuid()",
+      "column_name": "id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "articles",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "headline",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "original_title",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "summary",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "core_claim",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "journal",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 6,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "journal_impact_factor",
+      "data_type": "numeric",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 7,
+      "table_name": "articles",
+      "udt_name": "numeric",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "journal_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 8,
+      "table_name": "articles",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "article_type",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 9,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "publication_date",
+      "data_type": "date",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 10,
+      "table_name": "articles",
+      "udt_name": "date",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "tags",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 11,
+      "table_name": "articles",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "subtopic_slugs",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 12,
+      "table_name": "articles",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "author_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 13,
+      "table_name": "articles",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "author_name",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 14,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "author_institution",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 15,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'[]'::jsonb",
+      "column_name": "co_authors",
+      "data_type": "jsonb",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 16,
+      "table_name": "articles",
+      "udt_name": "jsonb",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "doi",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 17,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "original_url",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 18,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "uncertainty_notes",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 19,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "studies_referenced",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 20,
+      "table_name": "articles",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "discovered_via",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 21,
+      "table_name": "articles",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "confidence_score",
+      "data_type": "numeric",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 22,
+      "table_name": "articles",
+      "udt_name": "numeric",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "embedding",
+      "data_type": "USER-DEFINED",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 23,
+      "table_name": "articles",
+      "udt_name": "vector",
+      "udt_schema": "extensions"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "processing_log_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 24,
+      "table_name": "articles",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 25,
+      "table_name": "articles",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 26,
+      "table_name": "articles",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "fts",
+      "data_type": "tsvector",
+      "generation_expression": "to_tsvector('english'::regconfig, ((((((COALESCE(headline, ''::text) || ' '::text) || COALESCE(original_title, ''::text)) || ' '::text) || COALESCE(summary, ''::text)) || ' '::text) || COALESCE(core_claim, ''::text)))",
+      "identity_generation": null,
+      "is_generated": true,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 27,
+      "table_name": "articles",
+      "udt_name": "tsvector",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "gen_random_uuid()",
+      "column_name": "id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "authors",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "full_name",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "title",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "full_title",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "institution",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "lab_name",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 6,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "lab_description",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 7,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "lab_url",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 8,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "research_focus",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 9,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "biography",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 10,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "photo_url",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 11,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "primary_specialty",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 12,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "h_index",
+      "data_type": "integer",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "ordinal_position": 13,
+      "table_name": "authors",
+      "udt_name": "int4",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "orcid_id",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 14,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "openalex_id",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 15,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "semantic_scholar_id",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 16,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "citation_count",
+      "data_type": "integer",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "ordinal_position": 17,
+      "table_name": "authors",
+      "udt_name": "int4",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "recent_paper_count",
+      "data_type": "integer",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "ordinal_position": 18,
+      "table_name": "authors",
+      "udt_name": "int4",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "country",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 19,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "researchgate_url",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 20,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'[]'::jsonb",
+      "column_name": "recent_conferences",
+      "data_type": "jsonb",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 21,
+      "table_name": "authors",
+      "udt_name": "jsonb",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'[]'::jsonb",
+      "column_name": "recent_publications",
+      "data_type": "jsonb",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 22,
+      "table_name": "authors",
+      "udt_name": "jsonb",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "last_enriched_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 23,
+      "table_name": "authors",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "enrichment_source",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 24,
+      "table_name": "authors",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 25,
+      "table_name": "authors",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "fingerprint",
+      "data_type": "bigint",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": 64,
+      "numeric_scale": 0,
+      "ordinal_position": 1,
+      "table_name": "content_fingerprints",
+      "udt_name": "int8",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "article_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "content_fingerprints",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "computed_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "content_fingerprints",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "gen_random_uuid()",
+      "column_name": "id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "interaction_signals",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "interaction_signals",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "article_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "interaction_signals",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "signal_type",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "interaction_signals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "dwell_seconds",
+      "data_type": "numeric",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "interaction_signals",
+      "udt_name": "numeric",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "context",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 6,
+      "table_name": "interaction_signals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 7,
+      "table_name": "interaction_signals",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "gen_random_uuid()",
+      "column_name": "id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "journals",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "issn",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "journals",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "name",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "journals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "name_canonical",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "journals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "abbreviation",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "journals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "aliases",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 6,
+      "table_name": "journals",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "jcr_year",
+      "data_type": "smallint",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": 16,
+      "numeric_scale": 0,
+      "ordinal_position": 7,
+      "table_name": "journals",
+      "udt_name": "int2",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "impact_factor",
+      "data_type": "numeric",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 8,
+      "table_name": "journals",
+      "udt_name": "numeric",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "h5_index",
+      "data_type": "integer",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": 32,
+      "numeric_scale": 0,
+      "ordinal_position": 9,
+      "table_name": "journals",
+      "udt_name": "int4",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "tier",
+      "data_type": "smallint",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": 16,
+      "numeric_scale": 0,
+      "ordinal_position": 10,
+      "table_name": "journals",
+      "udt_name": "int2",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'medicine'::text",
+      "column_name": "corpus",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 11,
+      "table_name": "journals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "default_specialty",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 12,
+      "table_name": "journals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "rss_url",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 13,
+      "table_name": "journals",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "true",
+      "column_name": "active",
+      "data_type": "boolean",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 14,
+      "table_name": "journals",
+      "udt_name": "bool",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 15,
+      "table_name": "journals",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 16,
+      "table_name": "journals",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "code",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "specialties",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "label",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "specialties",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "specialties",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "gen_random_uuid()",
+      "column_name": "id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "subtopics",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "label",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "subtopics",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "slug",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "subtopics",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "specialty",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "subtopics",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "description",
+      "data_type": "text",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": true,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "subtopics",
+      "udt_name": "text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "keywords",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 6,
+      "table_name": "subtopics",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "mesh_terms",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 7,
+      "table_name": "subtopics",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "false",
+      "column_name": "seeded",
+      "data_type": "boolean",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 8,
+      "table_name": "subtopics",
+      "udt_name": "bool",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "created_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 9,
+      "table_name": "subtopics",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": null,
+      "column_name": "user_id",
+      "data_type": "uuid",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 1,
+      "table_name": "user_preferences",
+      "udt_name": "uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "pinned_specialties",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 2,
+      "table_name": "user_preferences",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::text[]",
+      "column_name": "active_subtopics",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 3,
+      "table_name": "user_preferences",
+      "udt_name": "_text",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::uuid[]",
+      "column_name": "followed_authors",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 4,
+      "table_name": "user_preferences",
+      "udt_name": "_uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::uuid[]",
+      "column_name": "liked_labs",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 5,
+      "table_name": "user_preferences",
+      "udt_name": "_uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "'{}'::uuid[]",
+      "column_name": "saved_articles",
+      "data_type": "ARRAY",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 6,
+      "table_name": "user_preferences",
+      "udt_name": "_uuid",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "false",
+      "column_name": "onboarded",
+      "data_type": "boolean",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 7,
+      "table_name": "user_preferences",
+      "udt_name": "bool",
+      "udt_schema": "pg_catalog"
+    },
+    {
+      "character_maximum_length": null,
+      "column_default": "now()",
+      "column_name": "updated_at",
+      "data_type": "timestamp with time zone",
+      "generation_expression": null,
+      "identity_generation": null,
+      "is_generated": false,
+      "is_identity": false,
+      "is_nullable": false,
+      "numeric_precision": null,
+      "numeric_scale": null,
+      "ordinal_position": 8,
+      "table_name": "user_preferences",
+      "udt_name": "timestamptz",
+      "udt_schema": "pg_catalog"
+    }
+  ],
+  "constraints": [
+    {
+      "constraint_name": "api_cache_pkey",
+      "definition": "PRIMARY KEY (cache_key)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "api_cache",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "article_processing_log_pkey",
+      "definition": "PRIMARY KEY (id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "article_processing_log",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "article_processing_log_status_check",
+      "definition": "CHECK ((status = ANY (ARRAY['in_progress'::text, 'completed'::text, 'rejected'::text, 'retry'::text])))",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "article_processing_log",
+      "type": "check"
+    },
+    {
+      "constraint_name": "article_specialties_article_id_fkey",
+      "definition": "FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "articles",
+      "table_name": "article_specialties",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "article_specialties_pkey",
+      "definition": "PRIMARY KEY (article_id, specialty_code)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "article_specialties",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "article_specialties_specialty_code_fkey",
+      "definition": "FOREIGN KEY (specialty_code) REFERENCES specialties(code)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "specialties",
+      "table_name": "article_specialties",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "articles_article_type_check",
+      "definition": "CHECK ((article_type = ANY (ARRAY['Editorial'::text, 'Commentary'::text, 'Perspective'::text, 'Letter'::text, 'News'::text])))",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "articles",
+      "type": "check"
+    },
+    {
+      "constraint_name": "articles_author_id_fkey",
+      "definition": "FOREIGN KEY (author_id) REFERENCES authors(id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "authors",
+      "table_name": "articles",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "articles_doi_key",
+      "definition": "UNIQUE (doi)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "articles",
+      "type": "unique"
+    },
+    {
+      "constraint_name": "articles_journal_id_fkey",
+      "definition": "FOREIGN KEY (journal_id) REFERENCES journals(id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "journals",
+      "table_name": "articles",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "articles_pkey",
+      "definition": "PRIMARY KEY (id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "articles",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "articles_processing_log_id_fkey",
+      "definition": "FOREIGN KEY (processing_log_id) REFERENCES article_processing_log(id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "article_processing_log",
+      "table_name": "articles",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "authors_orcid_id_key",
+      "definition": "UNIQUE (orcid_id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "authors",
+      "type": "unique"
+    },
+    {
+      "constraint_name": "authors_pkey",
+      "definition": "PRIMARY KEY (id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "authors",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "authors_primary_specialty_fkey",
+      "definition": "FOREIGN KEY (primary_specialty) REFERENCES specialties(code)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "specialties",
+      "table_name": "authors",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "content_fingerprints_article_id_fkey",
+      "definition": "FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "articles",
+      "table_name": "content_fingerprints",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "content_fingerprints_article_id_key",
+      "definition": "UNIQUE (article_id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "content_fingerprints",
+      "type": "unique"
+    },
+    {
+      "constraint_name": "content_fingerprints_pkey",
+      "definition": "PRIMARY KEY (fingerprint)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "content_fingerprints",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "interaction_signals_article_id_fkey",
+      "definition": "FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE SET NULL",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "articles",
+      "table_name": "interaction_signals",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "interaction_signals_pkey",
+      "definition": "PRIMARY KEY (id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "interaction_signals",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "interaction_signals_signal_type_check",
+      "definition": "CHECK ((signal_type = ANY (ARRAY['tap'::text, 'save'::text, 'share'::text, 'follow_author'::text, 'tag_tap'::text, 'specialty_pin'::text])))",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "interaction_signals",
+      "type": "check"
+    },
+    {
+      "constraint_name": "interaction_signals_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "auth",
+      "referenced_table": "users",
+      "table_name": "interaction_signals",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "journals_default_specialty_fkey",
+      "definition": "FOREIGN KEY (default_specialty) REFERENCES specialties(code)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "specialties",
+      "table_name": "journals",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "journals_name_key",
+      "definition": "UNIQUE (name)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "journals",
+      "type": "unique"
+    },
+    {
+      "constraint_name": "journals_pkey",
+      "definition": "PRIMARY KEY (id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "journals",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "journals_tier_check",
+      "definition": "CHECK ((tier = ANY (ARRAY[1, 2])))",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "journals",
+      "type": "check"
+    },
+    {
+      "constraint_name": "specialties_pkey",
+      "definition": "PRIMARY KEY (code)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "specialties",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "subtopics_pkey",
+      "definition": "PRIMARY KEY (id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "subtopics",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "subtopics_slug_key",
+      "definition": "UNIQUE (slug)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "subtopics",
+      "type": "unique"
+    },
+    {
+      "constraint_name": "subtopics_specialty_fkey",
+      "definition": "FOREIGN KEY (specialty) REFERENCES specialties(code)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "public",
+      "referenced_table": "specialties",
+      "table_name": "subtopics",
+      "type": "foreign_key"
+    },
+    {
+      "constraint_name": "user_preferences_pkey",
+      "definition": "PRIMARY KEY (user_id)",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": null,
+      "referenced_table": null,
+      "table_name": "user_preferences",
+      "type": "primary_key"
+    },
+    {
+      "constraint_name": "user_preferences_user_id_fkey",
+      "definition": "FOREIGN KEY (user_id) REFERENCES auth.users(id) ON DELETE CASCADE",
+      "is_deferrable": false,
+      "is_deferred_initially": false,
+      "is_validated": true,
+      "referenced_schema": "auth",
+      "referenced_table": "users",
+      "table_name": "user_preferences",
+      "type": "foreign_key"
+    }
+  ],
+  "data_api_exposure_as_captured": [
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "api_cache"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "article_processing_log"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "article_specialties"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "articles"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "authors"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "content_fingerprints"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "interaction_signals"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "journals"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "specialties"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "subtopics"
+    },
+    {
+      "anon_delete": true,
+      "anon_insert": true,
+      "anon_select": true,
+      "anon_update": true,
+      "authenticated_delete": true,
+      "authenticated_insert": true,
+      "authenticated_select": true,
+      "authenticated_update": true,
+      "service_role_select": true,
+      "table_name": "user_preferences"
+    }
+  ],
+  "domains": [],
+  "enums": [],
+  "extensions": [
+    {
+      "name": "pg_stat_statements",
+      "schema": "extensions",
+      "version": "1.11"
+    },
+    {
+      "name": "pgcrypto",
+      "schema": "extensions",
+      "version": "1.3"
+    },
+    {
+      "name": "plpgsql",
+      "schema": "pg_catalog",
+      "version": "1.0"
+    },
+    {
+      "name": "supabase_vault",
+      "schema": "vault",
+      "version": "0.3.1"
+    },
+    {
+      "name": "uuid-ossp",
+      "schema": "extensions",
+      "version": "1.1"
+    },
+    {
+      "name": "vector",
+      "schema": "extensions",
+      "version": "0.8.0"
+    }
+  ],
+  "functions": [
+    {
+      "arguments": "",
+      "configuration": null,
+      "definition": "CREATE OR REPLACE FUNCTION public.set_updated_at()\n RETURNS trigger\n LANGUAGE plpgsql\nAS $function$\n  BEGIN\n    NEW.updated_at = now();\n    RETURN NEW;\n  END;\n  $function$\n",
+      "function_name": "set_updated_at",
+      "is_security_definer": false,
+      "language": "plpgsql",
+      "owner": "postgres",
+      "parallel_safety": "unsafe",
+      "return_type": "trigger",
+      "volatility": "volatile"
+    }
+  ],
+  "generated_columns": [
+    {
+      "column_name": "fts",
+      "data_type": "tsvector",
+      "generation_expression": "to_tsvector('english'::regconfig, ((((((COALESCE(headline, ''::text) || ' '::text) || COALESCE(original_title, ''::text)) || ' '::text) || COALESCE(summary, ''::text)) || ' '::text) || COALESCE(core_claim, ''::text)))",
+      "table_name": "articles"
+    }
+  ],
+  "indexes": [
+    {
+      "definition": "CREATE UNIQUE INDEX api_cache_pkey ON public.api_cache USING btree (cache_key)",
+      "index_name": "api_cache_pkey",
+      "table_name": "api_cache"
+    },
+    {
+      "definition": "CREATE INDEX idx_api_cache_expires ON public.api_cache USING btree (expires_at) WHERE (expires_at IS NOT NULL)",
+      "index_name": "idx_api_cache_expires",
+      "table_name": "api_cache"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX article_processing_log_pkey ON public.article_processing_log USING btree (id)",
+      "index_name": "article_processing_log_pkey",
+      "table_name": "article_processing_log"
+    },
+    {
+      "definition": "CREATE INDEX idx_processing_log_doi ON public.article_processing_log USING btree (doi) WHERE (doi IS NOT NULL)",
+      "index_name": "idx_processing_log_doi",
+      "table_name": "article_processing_log"
+    },
+    {
+      "definition": "CREATE INDEX idx_processing_log_stage ON public.article_processing_log USING btree (stage)",
+      "index_name": "idx_processing_log_stage",
+      "table_name": "article_processing_log"
+    },
+    {
+      "definition": "CREATE INDEX idx_processing_log_status ON public.article_processing_log USING btree (status)",
+      "index_name": "idx_processing_log_status",
+      "table_name": "article_processing_log"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX article_specialties_pkey ON public.article_specialties USING btree (article_id, specialty_code)",
+      "index_name": "article_specialties_pkey",
+      "table_name": "article_specialties"
+    },
+    {
+      "definition": "CREATE INDEX idx_article_specialties_specialty ON public.article_specialties USING btree (specialty_code)",
+      "index_name": "idx_article_specialties_specialty",
+      "table_name": "article_specialties"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX articles_doi_key ON public.articles USING btree (doi)",
+      "index_name": "articles_doi_key",
+      "table_name": "articles"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX articles_pkey ON public.articles USING btree (id)",
+      "index_name": "articles_pkey",
+      "table_name": "articles"
+    },
+    {
+      "definition": "CREATE INDEX idx_articles_author_id ON public.articles USING btree (author_id)",
+      "index_name": "idx_articles_author_id",
+      "table_name": "articles"
+    },
+    {
+      "definition": "CREATE INDEX idx_articles_created_at ON public.articles USING btree (created_at DESC)",
+      "index_name": "idx_articles_created_at",
+      "table_name": "articles"
+    },
+    {
+      "definition": "CREATE INDEX idx_articles_fts ON public.articles USING gin (fts)",
+      "index_name": "idx_articles_fts",
+      "table_name": "articles"
+    },
+    {
+      "definition": "CREATE INDEX idx_articles_journal_id ON public.articles USING btree (journal_id) WHERE (journal_id IS NOT NULL)",
+      "index_name": "idx_articles_journal_id",
+      "table_name": "articles"
+    },
+    {
+      "definition": "CREATE INDEX idx_articles_publication_date ON public.articles USING btree (publication_date DESC)",
+      "index_name": "idx_articles_publication_date",
+      "table_name": "articles"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX authors_orcid_id_key ON public.authors USING btree (orcid_id)",
+      "index_name": "authors_orcid_id_key",
+      "table_name": "authors"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX authors_pkey ON public.authors USING btree (id)",
+      "index_name": "authors_pkey",
+      "table_name": "authors"
+    },
+    {
+      "definition": "CREATE INDEX idx_authors_full_name ON public.authors USING btree (full_name)",
+      "index_name": "idx_authors_full_name",
+      "table_name": "authors"
+    },
+    {
+      "definition": "CREATE INDEX idx_authors_openalex ON public.authors USING btree (openalex_id) WHERE (openalex_id IS NOT NULL)",
+      "index_name": "idx_authors_openalex",
+      "table_name": "authors"
+    },
+    {
+      "definition": "CREATE INDEX idx_authors_semantic ON public.authors USING btree (semantic_scholar_id) WHERE (semantic_scholar_id IS NOT NULL)",
+      "index_name": "idx_authors_semantic",
+      "table_name": "authors"
+    },
+    {
+      "definition": "CREATE INDEX idx_authors_unenriched ON public.authors USING btree (created_at) WHERE (last_enriched_at IS NULL)",
+      "index_name": "idx_authors_unenriched",
+      "table_name": "authors"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX content_fingerprints_article_id_key ON public.content_fingerprints USING btree (article_id)",
+      "index_name": "content_fingerprints_article_id_key",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX content_fingerprints_pkey ON public.content_fingerprints USING btree (fingerprint)",
+      "index_name": "content_fingerprints_pkey",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "definition": "CREATE INDEX idx_signals_article_id ON public.interaction_signals USING btree (article_id)",
+      "index_name": "idx_signals_article_id",
+      "table_name": "interaction_signals"
+    },
+    {
+      "definition": "CREATE INDEX idx_signals_type ON public.interaction_signals USING btree (signal_type)",
+      "index_name": "idx_signals_type",
+      "table_name": "interaction_signals"
+    },
+    {
+      "definition": "CREATE INDEX idx_signals_user_article ON public.interaction_signals USING btree (user_id, article_id)",
+      "index_name": "idx_signals_user_article",
+      "table_name": "interaction_signals"
+    },
+    {
+      "definition": "CREATE INDEX idx_signals_user_id ON public.interaction_signals USING btree (user_id)",
+      "index_name": "idx_signals_user_id",
+      "table_name": "interaction_signals"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX interaction_signals_pkey ON public.interaction_signals USING btree (id)",
+      "index_name": "interaction_signals_pkey",
+      "table_name": "interaction_signals"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX journals_name_key ON public.journals USING btree (name)",
+      "index_name": "journals_name_key",
+      "table_name": "journals"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX journals_pkey ON public.journals USING btree (id)",
+      "index_name": "journals_pkey",
+      "table_name": "journals"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX specialties_pkey ON public.specialties USING btree (code)",
+      "index_name": "specialties_pkey",
+      "table_name": "specialties"
+    },
+    {
+      "definition": "CREATE INDEX idx_subtopics_specialty ON public.subtopics USING btree (specialty)",
+      "index_name": "idx_subtopics_specialty",
+      "table_name": "subtopics"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX subtopics_pkey ON public.subtopics USING btree (id)",
+      "index_name": "subtopics_pkey",
+      "table_name": "subtopics"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX subtopics_slug_key ON public.subtopics USING btree (slug)",
+      "index_name": "subtopics_slug_key",
+      "table_name": "subtopics"
+    },
+    {
+      "definition": "CREATE UNIQUE INDEX user_preferences_pkey ON public.user_preferences USING btree (user_id)",
+      "index_name": "user_preferences_pkey",
+      "table_name": "user_preferences"
+    }
+  ],
+  "inventory_format_version": "1.0",
+  "materialized_views": [],
+  "policies": [
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "processing_log_authenticated_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "article_processing_log",
+      "using_expression": "(auth.role() = 'authenticated'::text)",
+      "with_check_expression": null
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "article_specialties_authenticated_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "article_specialties",
+      "using_expression": "(auth.role() = 'authenticated'::text)",
+      "with_check_expression": null
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "articles_authenticated_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "articles",
+      "using_expression": "(auth.role() = 'authenticated'::text)",
+      "with_check_expression": null
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "authors_authenticated_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "authors",
+      "using_expression": "(auth.role() = 'authenticated'::text)",
+      "with_check_expression": null
+    },
+    {
+      "command": "DELETE",
+      "permissive": "PERMISSIVE",
+      "policy_name": "signals_own_delete",
+      "roles": [
+        "public"
+      ],
+      "table_name": "interaction_signals",
+      "using_expression": "(auth.uid() = user_id)",
+      "with_check_expression": null
+    },
+    {
+      "command": "INSERT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "signals_own_insert",
+      "roles": [
+        "public"
+      ],
+      "table_name": "interaction_signals",
+      "using_expression": null,
+      "with_check_expression": "(auth.uid() = user_id)"
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "signals_own_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "interaction_signals",
+      "using_expression": "(auth.uid() = user_id)",
+      "with_check_expression": null
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "journals_authenticated_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "journals",
+      "using_expression": "(auth.role() = 'authenticated'::text)",
+      "with_check_expression": null
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "specialties_authenticated_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "specialties",
+      "using_expression": "(auth.role() = 'authenticated'::text)",
+      "with_check_expression": null
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "subtopics_authenticated_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "subtopics",
+      "using_expression": "(auth.role() = 'authenticated'::text)",
+      "with_check_expression": null
+    },
+    {
+      "command": "INSERT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "preferences_own_insert",
+      "roles": [
+        "public"
+      ],
+      "table_name": "user_preferences",
+      "using_expression": null,
+      "with_check_expression": "(auth.uid() = user_id)"
+    },
+    {
+      "command": "SELECT",
+      "permissive": "PERMISSIVE",
+      "policy_name": "preferences_own_read",
+      "roles": [
+        "public"
+      ],
+      "table_name": "user_preferences",
+      "using_expression": "(auth.uid() = user_id)",
+      "with_check_expression": null
+    },
+    {
+      "command": "UPDATE",
+      "permissive": "PERMISSIVE",
+      "policy_name": "preferences_own_update",
+      "roles": [
+        "public"
+      ],
+      "table_name": "user_preferences",
+      "using_expression": "(auth.uid() = user_id)",
+      "with_check_expression": "(auth.uid() = user_id)"
+    }
+  ],
+  "postgres_version": "PostgreSQL 17.6 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit",
+  "provenance": {
+    "capture_format_version_reported": "1.0",
+    "capture_local_file_outside_git": "MIG-001_LOCAL_CAPTURE/live_schema_capture.csv",
+    "capture_sha256": "670f0cfd82dbf783d7891663c58924a420137ee2b0014fdc3474de417b1fb7e1",
+    "capture_sql_file": "supabase/audit/MIG001_READ_ONLY_SCHEMA_CAPTURE.sql",
+    "claude_code_connected_directly_to_supabase": false,
+    "method": "manual_sql_editor_metadata_capture",
+    "note": "Claude Code never queried the live database. The project owner ran the committed read-only SQL file manually in the Supabase SQL Editor and exported the single-row result; Claude Code only read that exported file from local disk.",
+    "query_executed_at_reported": "2026-08-27T21:12:04.332485+00:00"
+  },
+  "public_table_count": 11,
+  "public_table_names": [
+    "api_cache",
+    "article_processing_log",
+    "article_specialties",
+    "articles",
+    "authors",
+    "content_fingerprints",
+    "interaction_signals",
+    "journals",
+    "specialties",
+    "subtopics",
+    "user_preferences"
+  ],
+  "publication_membership": [],
+  "routine_privileges": [
+    {
+      "grantee": "PUBLIC",
+      "privilege_type": "EXECUTE",
+      "routine_name": "set_updated_at"
+    },
+    {
+      "grantee": "anon",
+      "privilege_type": "EXECUTE",
+      "routine_name": "set_updated_at"
+    },
+    {
+      "grantee": "authenticated",
+      "privilege_type": "EXECUTE",
+      "routine_name": "set_updated_at"
+    },
+    {
+      "grantee": "postgres",
+      "privilege_type": "EXECUTE",
+      "routine_name": "set_updated_at"
+    },
+    {
+      "grantee": "service_role",
+      "privilege_type": "EXECUTE",
+      "routine_name": "set_updated_at"
+    }
+  ],
+  "schema_privileges": [
+    {
+      "has_create": false,
+      "has_usage": true,
+      "role": "anon",
+      "schema_name": "public"
+    },
+    {
+      "has_create": false,
+      "has_usage": true,
+      "role": "authenticated",
+      "schema_name": "public"
+    },
+    {
+      "has_create": true,
+      "has_usage": true,
+      "role": "postgres",
+      "schema_name": "public"
+    },
+    {
+      "has_create": false,
+      "has_usage": true,
+      "role": "service_role",
+      "schema_name": "public"
+    }
+  ],
+  "schemas_present": [
+    "auth",
+    "extensions",
+    "graphql",
+    "graphql_public",
+    "pgbouncer",
+    "public",
+    "realtime",
+    "storage",
+    "vault"
+  ],
+  "sequences": [],
+  "table_privileges": [
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "api_cache"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "article_processing_log"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "article_specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "articles"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "authors"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "content_fingerprints"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "interaction_signals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "journals"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "specialties"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "subtopics"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "anon",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "authenticated",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "DELETE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "INSERT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "REFERENCES",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "SELECT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRIGGER",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "TRUNCATE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "postgres",
+      "is_grantable": true,
+      "privilege_type": "UPDATE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "DELETE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "INSERT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "REFERENCES",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "SELECT",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRIGGER",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "TRUNCATE",
+      "table_name": "user_preferences"
+    },
+    {
+      "grantee": "service_role",
+      "is_grantable": false,
+      "privilege_type": "UPDATE",
+      "table_name": "user_preferences"
+    }
+  ],
+  "tables": [
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "api_cache"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "article_processing_log"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "article_specialties"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "articles"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "authors"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "content_fingerprints"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "interaction_signals"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "journals"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "specialties"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "subtopics"
+    },
+    {
+      "comment": null,
+      "kind": "table",
+      "owner": "postgres",
+      "row_level_security_enabled": true,
+      "row_level_security_forced": false,
+      "table_name": "user_preferences"
+    }
+  ],
+  "triggers": [
+    {
+      "definition": "CREATE TRIGGER trg_processing_log_updated_at BEFORE UPDATE ON public.article_processing_log FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "enabled_state": "O",
+      "table_name": "article_processing_log",
+      "trigger_name": "trg_processing_log_updated_at"
+    },
+    {
+      "definition": "CREATE TRIGGER trg_articles_updated_at BEFORE UPDATE ON public.articles FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "enabled_state": "O",
+      "table_name": "articles",
+      "trigger_name": "trg_articles_updated_at"
+    },
+    {
+      "definition": "CREATE TRIGGER trg_journals_updated_at BEFORE UPDATE ON public.journals FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "enabled_state": "O",
+      "table_name": "journals",
+      "trigger_name": "trg_journals_updated_at"
+    },
+    {
+      "definition": "CREATE TRIGGER trg_user_preferences_updated_at BEFORE UPDATE ON public.user_preferences FOR EACH ROW EXECUTE FUNCTION set_updated_at()",
+      "enabled_state": "O",
+      "table_name": "user_preferences",
+      "trigger_name": "trg_user_preferences_updated_at"
+    }
+  ],
+  "views": []
+}

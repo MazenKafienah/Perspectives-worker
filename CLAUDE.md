@@ -10,6 +10,10 @@ This file is read by Claude Code when working in this repository. The full set o
 - Summarisation stays two-call; dedup stays DOI-then-SimHash; impact factors stay lookup-only; embeddings stay OpenAI `text-embedding-3-small` at 1536 dimensions.
 - Verify exact Anthropic model identifiers against official docs before writing them into code — do not trust planning-document pins.
 
+## Permanent credential-handling rules
+
+Never inspect Keychain, credential helpers, environment variables, shell history, or populated `.env` files as a diagnostic step; never read/print/commit a Supabase key, password, connection string, or any other credential; never connect directly to Supabase (see [AGENTS.md](AGENTS.md) for the full list and the incident that established this). If a required CLI or auth is unavailable, stop and report that plainly rather than probing for a workaround.
+
 ## Current phase
 
-This repository is in **MIG-000** (governance bootstrap) as of the commit that added this file. No worker modules, dependencies, or SQL migrations exist yet. A later, separately authorised phase (MIG-001) performs read-only live-schema capture before any migration file is written here.
+MIG-001 is complete: the live schema was captured read-only (a human ran the query manually and exported the result; Claude Code only read that export from disk), reconciled against the planning documents, and an existing-state baseline plus a proposed grant script were drafted — both guarded against execution, neither replay-tested, neither run against the live project. No worker modules or dependencies exist yet.
