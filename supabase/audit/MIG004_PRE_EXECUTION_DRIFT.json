@@ -1,0 +1,780 @@
+{
+  "comparisons": [
+    {
+      "category": "table_set",
+      "fresh": [
+        "api_cache",
+        "article_processing_log",
+        "article_specialties",
+        "articles",
+        "authors",
+        "content_fingerprints",
+        "interaction_signals",
+        "journals",
+        "specialties",
+        "subtopics",
+        "user_preferences"
+      ],
+      "item": "public_table_names",
+      "note": "",
+      "reference": [
+        "api_cache",
+        "article_processing_log",
+        "article_specialties",
+        "articles",
+        "authors",
+        "content_fingerprints",
+        "interaction_signals",
+        "journals",
+        "specialties",
+        "subtopics",
+        "user_preferences"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "postgres_version",
+      "fresh": "PostgreSQL 17.6 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit",
+      "item": "version()",
+      "note": "",
+      "reference": "PostgreSQL 17.6 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 15.2.0, 64-bit",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "11 items",
+      "item": "tables",
+      "note": "",
+      "reference": "11 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "114 items",
+      "item": "columns",
+      "note": "",
+      "reference": "114 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "32 items",
+      "item": "constraints",
+      "note": "",
+      "reference": "32 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "35 items",
+      "item": "indexes",
+      "note": "",
+      "reference": "35 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "4 items",
+      "item": "triggers",
+      "note": "",
+      "reference": "4 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "1 items",
+      "item": "functions",
+      "note": "",
+      "reference": "1 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "1 items",
+      "item": "generated_columns",
+      "note": "",
+      "reference": "1 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "0 items",
+      "item": "enums",
+      "note": "",
+      "reference": "0 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "0 items",
+      "item": "domains",
+      "note": "",
+      "reference": "0 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "0 items",
+      "item": "sequences",
+      "note": "",
+      "reference": "0 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "0 items",
+      "item": "views",
+      "note": "",
+      "reference": "0 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "0 items",
+      "item": "materialized_views",
+      "note": "",
+      "reference": "0 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "9 items",
+      "item": "schemas",
+      "note": "",
+      "reference": "9 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "6 items",
+      "item": "extensions",
+      "note": "",
+      "reference": "6 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "structure",
+      "fresh": "0 items",
+      "item": "publication_membership",
+      "note": "",
+      "reference": "0 items",
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "processing_log_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_processing_log",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "article_processing_log.processing_log_authenticated_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "processing_log_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_processing_log",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "article_specialties_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_specialties",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "article_specialties.article_specialties_authenticated_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "article_specialties_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_specialties",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "articles_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "articles",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "articles.articles_authenticated_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "articles_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "articles",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "authors_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "authors",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "authors.authors_authenticated_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "authors_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "authors",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "DELETE",
+        "permissive": "PERMISSIVE",
+        "policy_name": "signals_own_delete",
+        "roles": [
+          "public"
+        ],
+        "table_name": "interaction_signals",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": null
+      },
+      "item": "interaction_signals.signals_own_delete",
+      "note": "",
+      "reference": {
+        "command": "DELETE",
+        "permissive": "PERMISSIVE",
+        "policy_name": "signals_own_delete",
+        "roles": [
+          "public"
+        ],
+        "table_name": "interaction_signals",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "INSERT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "signals_own_insert",
+        "roles": [
+          "public"
+        ],
+        "table_name": "interaction_signals",
+        "using_expression": null,
+        "with_check_expression": "(auth.uid() = user_id)"
+      },
+      "item": "interaction_signals.signals_own_insert",
+      "note": "",
+      "reference": {
+        "command": "INSERT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "signals_own_insert",
+        "roles": [
+          "public"
+        ],
+        "table_name": "interaction_signals",
+        "using_expression": null,
+        "with_check_expression": "(auth.uid() = user_id)"
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "signals_own_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "interaction_signals",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": null
+      },
+      "item": "interaction_signals.signals_own_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "signals_own_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "interaction_signals",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "journals_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "journals",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "journals.journals_authenticated_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "journals_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "journals",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "specialties_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "specialties",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "specialties.specialties_authenticated_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "specialties_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "specialties",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "subtopics_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "subtopics",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "subtopics.subtopics_authenticated_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "subtopics_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "subtopics",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "INSERT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "preferences_own_insert",
+        "roles": [
+          "public"
+        ],
+        "table_name": "user_preferences",
+        "using_expression": null,
+        "with_check_expression": "(auth.uid() = user_id)"
+      },
+      "item": "user_preferences.preferences_own_insert",
+      "note": "",
+      "reference": {
+        "command": "INSERT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "preferences_own_insert",
+        "roles": [
+          "public"
+        ],
+        "table_name": "user_preferences",
+        "using_expression": null,
+        "with_check_expression": "(auth.uid() = user_id)"
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "preferences_own_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "user_preferences",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": null
+      },
+      "item": "user_preferences.preferences_own_read",
+      "note": "",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "preferences_own_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "user_preferences",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy",
+      "fresh": {
+        "command": "UPDATE",
+        "permissive": "PERMISSIVE",
+        "policy_name": "preferences_own_update",
+        "roles": [
+          "public"
+        ],
+        "table_name": "user_preferences",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": "(auth.uid() = user_id)"
+      },
+      "item": "user_preferences.preferences_own_update",
+      "note": "",
+      "reference": {
+        "command": "UPDATE",
+        "permissive": "PERMISSIVE",
+        "policy_name": "preferences_own_update",
+        "roles": [
+          "public"
+        ],
+        "table_name": "user_preferences",
+        "using_expression": "(auth.uid() = user_id)",
+        "with_check_expression": "(auth.uid() = user_id)"
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "policy_cross_check",
+      "fresh": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "processing_log_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_processing_log",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "item": "article_processing_log.processing_log_authenticated_read",
+      "note": "Cross-checked against MIG-003's explicitly recorded post-execution policy definition",
+      "reference": {
+        "command": "SELECT",
+        "permissive": "PERMISSIVE",
+        "policy_name": "processing_log_authenticated_read",
+        "roles": [
+          "public"
+        ],
+        "table_name": "article_processing_log",
+        "using_expression": "(auth.role() = 'authenticated'::text)",
+        "with_check_expression": null
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "api_cache.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "api_cache.authenticated",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "article_processing_log.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "article_processing_log.authenticated",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "article_specialties.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "SELECT"
+      ],
+      "item": "article_specialties.authenticated",
+      "note": "",
+      "reference": [
+        "SELECT"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "articles.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "SELECT"
+      ],
+      "item": "articles.authenticated",
+      "note": "",
+      "reference": [
+        "SELECT"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "authors.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "SELECT"
+      ],
+      "item": "authors.authenticated",
+      "note": "",
+      "reference": [
+        "SELECT"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "content_fingerprints.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "content_fingerprints.authenticated",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "interaction_signals.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "DELETE",
+        "INSERT",
+        "SELECT"
+      ],
+      "item": "interaction_signals.authenticated",
+      "note": "",
+      "reference": [
+        "DELETE",
+        "INSERT",
+        "SELECT"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "journals.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "SELECT"
+      ],
+      "item": "journals.authenticated",
+      "note": "",
+      "reference": [
+        "SELECT"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "specialties.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "SELECT"
+      ],
+      "item": "specialties.authenticated",
+      "note": "",
+      "reference": [
+        "SELECT"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "subtopics.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "SELECT"
+      ],
+      "item": "subtopics.authenticated",
+      "note": "",
+      "reference": [
+        "SELECT"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [],
+      "item": "user_preferences.anon",
+      "note": "",
+      "reference": [],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "privilege",
+      "fresh": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ],
+      "item": "user_preferences.authenticated",
+      "note": "",
+      "reference": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ],
+      "status": "EXACT_MATCH"
+    },
+    {
+      "category": "service_role",
+      "fresh": 77,
+      "item": "row_count",
+      "note": "",
+      "reference": 77,
+      "status": "EXACT_MATCH"
+    }
+  ]
+}
