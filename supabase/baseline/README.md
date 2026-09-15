@@ -21,11 +21,13 @@ Evidence. A faithful, best-effort reconstruction of what the live database looke
 
 MIG-002 (2026-08-30) replayed `20260821_EXISTING_STATE_BASELINE.sql` against a disposable local Supabase development stack — the committed file itself was never modified; a mechanically-guard-stripped, untracked local copy was used, and only that copy was executed. **Result: full success, zero errors, zero corrections needed.** A structural comparison against the original live capture found 220/223 categories an exact match, with the only differences being expected environment noise (a minor `vector` extension patch-version difference; a couple of platform-internal schema names). See `docs/MIG002_LOCAL_REPLAY_VALIDATION.md` for the complete report and `MIG002_LIVE_VS_LOCAL_SCHEMA_DIFF.json` in this directory for the machine-readable detail.
 
-**This still does not mean the baseline has been applied to production**, and it does not resolve the embedding-dimension limitation below (local replay validates DDL syntax, not the live column's actual dimension).
+**This still does not mean the baseline has been applied to production.** At the time of this replay, it also did not resolve the embedding-dimension question below — local replay validates DDL syntax, not the live column's actual dimension. That question was separately resolved by MIG-004 (see below), via a live catalogue query, not via this replay.
 
-## Known limitation
+## Known limitation — RESOLVED by MIG-004
 
-`articles.embedding` is captured as `extensions.vector` with an **unspecified dimension** — `information_schema.columns` doesn't expose a vector column's typmod the way it exposes `character_maximum_length` for varchar. The planning documents assume 1536 (OpenAI `text-embedding-3-small`), but that has not been confirmed against the live catalogue and is not asserted as fact anywhere in this baseline or in the MIG-002 replay. See the SQL file's header comment for how to verify it.
+`articles.embedding` is captured as `extensions.vector` with an **unspecified dimension** in this baseline's DDL — `information_schema.columns` doesn't expose a vector column's typmod the way it exposes `character_maximum_length` for varchar, so the mechanical reconstruction here still omits it. That gap in the *reconstructed DDL* is why the baseline SQL itself still doesn't write `vector(1536)`.
+
+However, the live *dimension itself* is no longer unknown: MIG-004 (2026-09-08) ran a dedicated, read-only `pg_catalog` query (`supabase/audit/MIG004_READ_ONLY_EMBEDDING_METADATA.sql`) directly against production and got `formatted_type = vector(1536)`, `type_modifier = 1536` — two independent fields agreeing. **`public.articles.embedding` = `vector(1536)`, provenance `LIVE_METADATA_VERIFIED`.** See `docs/MIG004_PRE_EXECUTION_VERIFICATION.md` for the full evidence.
 
 ## Related reading
 

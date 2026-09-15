@@ -29,9 +29,11 @@ This repository owns the **ingestion pipeline and the production database schema
 
 `supabase/migrations/` is the **only** canonical, executable location for PERSPECTIVES production SQL. No other repository in this project (including the general migration toolkit) should hold a second canonical copy of production schema.
 
-MIG-001 captured the existing live database schema read-only and reconciled it against the planning documents. MIG-002 replayed that baseline against a disposable local Supabase stack (full success) and locally rehearsed the corresponding least-privilege grant plan (idempotent, reversible, effective access verified). **MIG-003 then executed that exact reviewed grant plan against the live production project** — manually, by the project owner, in the Supabase SQL Editor; Claude Code never connected to production or held a production credential. Post-execution verification confirmed an exact match to the target access matrix on every table/role pair, zero non-privilege structural change, and `service_role` fully unaffected. See [`docs/MIG003_FINAL_VERIFICATION.md`](docs/MIG003_FINAL_VERIFICATION.md) for the complete record.
+MIG-001 captured the existing live database schema read-only and reconciled it against the planning documents. MIG-002 replayed that baseline against a disposable local Supabase stack (full success) and locally rehearsed the corresponding least-privilege grant plan (idempotent, reversible, effective access verified). MIG-003 then executed that exact reviewed grant plan against the live production project — manually, by the project owner, in the Supabase SQL Editor; Claude Code never connected to production or held a production credential. Post-execution verification confirmed an exact match to the target access matrix on every table/role pair, zero non-privilege structural change, and `service_role` fully unaffected.
 
-**The schema baseline itself (`supabase/baseline/`) has still never been applied to production** — only the Data API grant/revoke transition has. The existing-state baseline remains replay-validated-only; see [`supabase/baseline/README.md`](supabase/baseline/README.md).
+MIG-004 closed the two remaining evidence gaps: a dedicated read-only catalogue query confirmed `articles.embedding` is `vector(1536)` (`LIVE_METADATA_VERIFIED`), and the one remaining stale RLS policy on `article_processing_log` was removed — again manually, by the project owner. Post-execution verification found zero difference beyond that single intended change. `article_processing_log` is now worker-only at both the grant and RLS layers. See [`docs/MIG004_FINAL_VERIFICATION.md`](docs/MIG004_FINAL_VERIFICATION.md) for the complete record.
+
+**The schema baseline itself (`supabase/baseline/`) has still never been applied to production** — only Data API grant and RLS-policy changes have. The existing-state baseline remains replay-validated-only; see [`supabase/baseline/README.md`](supabase/baseline/README.md).
 
 ## Environment variables
 
@@ -47,4 +49,4 @@ OPENAI_API_KEY=
 
 ## Status
 
-This repository currently contains only MIG-000 governance and documentation, plus an empty `supabase/migrations/` directory placeholder. No worker code, dependencies, or schema SQL has been created yet.
+MIG-001 through MIG-004 are complete (see `docs/MIG004_FINAL_VERIFICATION.md`). `supabase/migrations/` remains an empty placeholder — no migration has ever been executed against production; only Data API grants and one RLS policy have. No worker pipeline code or dependencies have been created yet.

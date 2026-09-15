@@ -1,0 +1,138 @@
+{
+  "expected_metadata_differences": {
+    "query_executed_at": {
+      "post": "2026-09-14T22:41:55.69746+00:00",
+      "pre": "2026-09-08T19:51:27.491565+00:00"
+    }
+  },
+  "material_differences": [],
+  "policy_comparison": {
+    "added": [],
+    "post_count": 12,
+    "pre_count": 13,
+    "removed": [
+      "article_processing_log.processing_log_authenticated_read"
+    ],
+    "unexpectedly_changed": []
+  },
+  "privilege_comparison": [
+    {
+      "post": [
+        "SELECT"
+      ],
+      "pre": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "article_specialties"
+    },
+    {
+      "post": [
+        "SELECT"
+      ],
+      "pre": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "articles"
+    },
+    {
+      "post": [
+        "SELECT"
+      ],
+      "pre": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "authors"
+    },
+    {
+      "post": [
+        "DELETE",
+        "INSERT",
+        "SELECT"
+      ],
+      "pre": [
+        "DELETE",
+        "INSERT",
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "interaction_signals"
+    },
+    {
+      "post": [
+        "SELECT"
+      ],
+      "pre": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "journals"
+    },
+    {
+      "post": [
+        "SELECT"
+      ],
+      "pre": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "specialties"
+    },
+    {
+      "post": [
+        "SELECT"
+      ],
+      "pre": [
+        "SELECT"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "subtopics"
+    },
+    {
+      "post": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ],
+      "pre": [
+        "INSERT",
+        "SELECT",
+        "UPDATE"
+      ],
+      "role": "authenticated",
+      "status": "MATCH",
+      "table": "user_preferences"
+    }
+  ],
+  "service_role": {
+    "identical": true,
+    "post_rows": 77,
+    "pre_rows": 77
+  },
+  "structural_invariants": {
+    "columns": "IDENTICAL",
+    "constraints": "IDENTICAL",
+    "domains": "IDENTICAL",
+    "enums": "IDENTICAL",
+    "extensions": "IDENTICAL",
+    "functions": "IDENTICAL",
+    "generated_columns": "IDENTICAL",
+    "indexes": "IDENTICAL",
+    "materialized_views": "IDENTICAL",
+    "publication_membership": "IDENTICAL",
+    "schemas": "IDENTICAL",
+    "sequences": "IDENTICAL",
+    "tables": "IDENTICAL",
+    "triggers": "IDENTICAL",
+    "views": "IDENTICAL"
+  }
+}
